@@ -1,0 +1,11 @@
+<h1>Articles#edit</h1>
+
+<%= form_with model: @article, url: article_path(@article), local: true do |f| %>
+  <%= f.text_field :title, placeholder: 'max:100' %>
+
+  <%= f.text_area :body, placeholder: '' %>
+
+  <%= f.submit %>
+<% end %>
+
+  <%= link_to 'Delete', article_path(@article), method: :delete, data: { confirm: '本当に削除しますか？' } %>

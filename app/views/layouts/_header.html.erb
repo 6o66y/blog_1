@@ -1,0 +1,17 @@
+<% if writer_signed_in? %>
+  <nav>
+    <ul>
+      <li>
+      	<%= link_to 'NEW', new_article_path %>
+      </li>
+      <li>
+      	<%= link_to 'index', root_path %>
+      </li>
+      <li>
+      	<%#= link_to 'My page', writer_path(current_writer) %>
+      </li>
+   	  <li><%= link_to 'Log out', destroy_writer_session_path, method: :delete %>
+   	  </li>
+    </ul>
+  </nav>
+<% end %>

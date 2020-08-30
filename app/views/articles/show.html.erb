@@ -1,0 +1,11 @@
+<%= link_to '<<Back', root_path %>
+<h1>Articles#show</h1>
+<%= @article.writer.name %>
+<%= @article.title %>
+<%= markdown(@article.body).html_safe %>
+
+<% if @article.writer == current_writer %>
+  <%= link_to 'Edit', edit_article_path(@article) %>
+<% end %>
+
+

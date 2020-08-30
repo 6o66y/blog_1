@@ -1,0 +1,9 @@
+<h1>Articles#new</h1>
+
+<%= form_with model: @article, url: articles_path, local: true do |f| %>
+  <%= f.text_field :title, placeholder: 'max:100' %>
+
+  <%= f.text_area :body, placeholder: ' ' %>
+
+  <%= f.submit %>
+<% end %>

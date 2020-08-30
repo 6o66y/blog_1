@@ -10,7 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_30_034506) do
+ActiveRecord::Schema.define(version: 2020_08_30_070402) do
+
+  create_table "articles", force: :cascade do |t|
+    t.string "title"
+    t.text "body"
+    t.integer "writer_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["writer_id"], name: "index_articles_on_writer_id"
+  end
 
   create_table "writers", force: :cascade do |t|
     t.string "email", default: "", null: false

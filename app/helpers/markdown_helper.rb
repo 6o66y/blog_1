@@ -17,6 +17,7 @@ module MarkdownHelper
   	  underline: true,
   	  footnotes: true,
   	  fenced_code_blocks: true,
+      strikethrough: true,
   	  tables: true
   	}
 
