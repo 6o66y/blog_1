@@ -28,6 +28,10 @@ body {
   margin-top: 20px;
 }
 
+.image_ {
+  margin-bottom: 10px;
+}
+
 
 
 
@@ -115,7 +119,7 @@ body {
 .title_index {
   font-size: 30px;
   color: #000;
-  margin-top: 25px;
+  margin-bottom: 5px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -155,6 +159,11 @@ body {
   margin-bottom: 100px;
   border: solid 1px #000;
   padding: 20px;
+  .image {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: solid 1px #000;
+  }
 }
 
 

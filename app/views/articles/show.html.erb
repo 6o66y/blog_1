@@ -19,5 +19,6 @@
 </p>
 
 <div class="body">
+  <%= attachment_image_tag @article, :image, :fill, 400, 250, format: 'jpeg', class: 'image' %>
   <%= markdown(@article.body).html_safe %>
 </div>

@@ -16,7 +16,7 @@ class ArticlesController < ApplicationController
   end
 
   def index
-  	@articles = Article.all.order(created_at: :desc)
+  	@articles = Article.page(params[:page]).reverse_order
   end
 
   def show
@@ -48,7 +48,7 @@ class ArticlesController < ApplicationController
   private
 
   def article_params
-  	params.require(:article).permit(:title, :body)
+  	params.require(:article).permit(:title, :body, :image)
   end
 
   def guard_other

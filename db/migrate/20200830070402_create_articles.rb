@@ -4,6 +4,7 @@ class CreateArticles < ActiveRecord::Migration[5.2]
       t.string :title
       t.text :body
       t.references :writer, foreign_key: true
+      t.string :image_id
 
       t.timestamps
     end
