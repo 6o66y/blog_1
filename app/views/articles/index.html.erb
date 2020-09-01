@@ -1,6 +1,8 @@
-<div class="about_background_image">
-  <h1 class="text-center myBlog">MY BLOG</h1>
-</div>
+<% unless writer_signed_in? %>
+  <div class="about_background_image">
+    <h1 class="text-center myBlog">MY BLOG</h1>
+  </div>
+<% end %>
 
 <h1 class="h1">Articles</h1>
 
