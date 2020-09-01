@@ -1,9 +1,22 @@
-<h1>Writers#edit</h1>
+<%= link_to writer_path(@writer) do %>
+  <div class="back"></div>
+<% end %>
+
+<h1 class="h1">Edit -Writer-</h1>
 
 <%= form_with model: @writer, url: writer_path(@writer) do |f| %>
-  <%= f.text_field :name %>
+  
+  <div class="row">
+    <div class="form-group col-md-4">
+      <%= f.text_field :name, class: 'form-control' %>
+    </div>
+  </div>
 
-  <%= f.email_field :email %>
+  <div class="row">
+    <div class="form-group col-md-4">
+      <%= f.email_field :email, class: 'form-control' %>
+    </div>
+  </div>
 
-  <%= f.submit %>
+  <%= f.submit 'Update', class: 'btn btn-warning' %>
 <% end %>

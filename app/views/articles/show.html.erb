@@ -1,11 +1,23 @@
-<%= link_to '<<Back', root_path %>
-<h1>Articles#show</h1>
-<%= @article.writer.name %>
-<%= @article.title %>
-<%= markdown(@article.body).html_safe %>
-
-<% if @article.writer == current_writer %>
-  <%= link_to 'Edit', edit_article_path(@article) %>
+<%= link_to root_path do %>
+  <div class="back"></div>
 <% end %>
 
+<% if @article.writer == current_writer %>
+  <%= link_to edit_article_path(@article) do %>
+    <div class="articles_edit pull-right"></div>
+  <% end %>
 
+  <%= link_to article_path(@article), method: :delete, data: { confirm: '本当に削除しますか？' } do %>
+    <div class="delete pull-right"></div><br>
+  <% end %>
+<% end %>
+
+<h1 class="title"><%= @article.title %></h1>
+
+<p class="article_show_name pull-right">
+	WRITER：<%= @article.writer.name %>
+</p>
+
+<div class="body">
+  <%= markdown(@article.body).html_safe %>
+</div>

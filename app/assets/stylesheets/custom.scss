@@ -1,2 +1,183 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+
+/* universal */
+
+.top_30 {
+  margin-top: 30px;
+}
+
+body {
+  background-image: url("background_image.jpeg");
+  background-size: cover;
+  background-positon: center;
+}
+
+
+/* header */
+
+.header_title {
+  margin-right: 30px;
+  color: #000;
+}
+
+.header_nav {
+  height: 50px;
+  width: 100%;
+  background-color: rgb(255, 185, 0);
+  ul {
+    list-style-type: none;
+    li {
+      display: inline-block;
+      margin-right: 20px;
+    }
+  }
+}
+
+.new {
+  background-image: url("new.png");
+  background-size: cover;
+  background-positon: center;
+  height: 40px;
+  width: 40px;
+  margin-top: 5px;
+}
+
+.index_header {
+  background-image: url("index_header.png");
+  background-size: cover;
+  background-positon: center;
+  height: 40px;
+  width: 40px;
+  margin-top: 5px;
+}
+
+.myPage {
+  background-image: url("myPage.png");
+  background-size: cover;
+  background-positon: center;
+  height: 40px;
+  width: 40px;
+  margin-top: 5px;
+}
+
+
+.logout {
+  background-image: url("logout.png");
+  background-size: cover;
+  background-positon: center;
+  height: 40px;
+  width: 40px;
+  margin-top: 5px;
+}
+
+
+/* articles */
+
+.h1 {
+  margin-bottom: 30px;
+}
+
+.back {
+  background-image: url("back.png");
+  background-size: cover;
+  background-positon: center;
+  height: 15px;
+  width: 15px;
+  margin-top: 10px;
+}
+
+
+
+
+
+
+/* articles index */
+
+.index {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.index_item {
+  padding: 10px;
+  border: solid 1px #000;
+}
+
+.index > .index_item {
+  width: 200px;
+  height: 150px;
+  margin: 10px;
+}
+
+.title_index {
+  font-size: 30px;
+  color: #000;
+  margin-top: 25px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.date_index {
+  font-size: 20px;
+  color: #000;
+  text-align: center;
+  border-bottom: solid 1px #000;
+}
+
+
+
+/* articles show */
+
+.articles_edit, .delete {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.articles_edit {
+  background-image: url("edit1.png");
+  background-size: cover;
+  background-positon: center;
+  height: 30px;
+  width: 30px;
+}
+
+.title {
+  border-bottom: solid 1px #000;
+}
+
+.body {
+  word-break: break-all;
+  margin-top: 50px;
+  margin-bottom: 100px;
+  border: solid 1px #000;
+  padding: 20px;
+}
+
+
+
+/* articles edit */
+
+.delete {
+  background-image: url("delete.png");
+  background-size: cover;
+  background-positon: center;
+  height: 30px;
+  width: 30px;
+}
+
+
+
+/* writer show */
+
+.writer_edit {
+  background-image: url("edit2.png");
+  background-size: cover;
+  background-positon: center;
+  height: 20px;
+  width: 20px;
+}
+

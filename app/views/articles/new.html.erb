@@ -1,9 +1,14 @@
-<h1>Articles#new</h1>
+<h1 class="h1">Create New Article</h1>
 
 <%= form_with model: @article, url: articles_path, local: true do |f| %>
-  <%= f.text_field :title, placeholder: 'max:100' %>
 
-  <%= f.text_area :body, placeholder: ' ' %>
+<div class="form-group">
+  <%= f.text_field :title, placeholder: 'Title (max:100)', class: 'form-control' %>
+</div>
 
-  <%= f.submit %>
+<div class="form-group">
+  <%= f.text_area :body, placeholder: 'How was your day?', class: 'form-control' %>
+</div>
+
+  <%= f.submit 'Create', class: 'btn btn-warning pull-right' %>
 <% end %>

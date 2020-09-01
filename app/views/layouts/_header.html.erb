@@ -1,17 +1,49 @@
 <% if writer_signed_in? %>
-  <nav>
+  <nav class="header_nav">
     <ul>
       <li>
-      	<%= link_to 'NEW', new_article_path %>
+        <%= link_to root_path do %>
+          <h2 class="header_title">MY BLOG</h2>
+        <% end %>
       </li>
       <li>
-      	<%= link_to 'index', root_path %>
+      	<%= link_to new_article_path do %>
+          <div class="new"></div>
+        <% end %>
       </li>
       <li>
-      	<%= link_to 'My page', writer_path(current_writer) %>
+      	<%= link_to root_path do %>
+          <div class="index_header"></div>
+        <% end %>
       </li>
-   	  <li><%= link_to 'Log out', destroy_writer_session_path, method: :delete %>
+      <li>
+      	<%= link_to writer_path(current_writer) do %>
+          <div class="myPage"></div>
+        <% end %>
+      </li>
+   	  <li class="navbar-right">
+        <%= link_to destroy_writer_session_path, method: :delete do %>
+          <div class="logout"></div>
+        <% end %>
    	  </li>
+    </ul>
+  </nav>
+<% else %>
+  <nav class="header_nav">
+    <ul>
+      <li>
+        <h2 class="header_title">MY BLOG</h2>
+      </li>
+      <li>
+        <%= link_to root_path do %>
+          <div class="index_header"></div>
+        <% end %>
+      </li>
+      <!-- <li>
+        <%#= link_to writer_path(writer) do %>
+          <div class="myPage"></div>
+        <%# end %>
+      </li> -->
     </ul>
   </nav>
 <% end %>

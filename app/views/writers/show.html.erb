@@ -1,6 +1,23 @@
-<h1>Writers#show</h1>
+<div class="writers_show">
+  <%= link_to root_path do %>
+    <div class="back"></div>
+  <% end %>
 
-<%= @writer.name %>
-<%= @writer.email %>
+  <h1 class="">My Page</h1>
 
-<%= link_to 'Edit', edit_writer_path(@writer) %>
+  <div class="row">
+  	<div class="col-md-2">
+      <%= link_to edit_writer_path(@writer) do %>
+        <div class="writer_edit pull-right"></div>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="writer_name">
+    <%= @writer.name %>
+  </div>
+
+  <div class="writer_name">
+    <%= @writer.email %>
+  </div>
+</div>
