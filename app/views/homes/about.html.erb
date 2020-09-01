@@ -1,12 +1,13 @@
 <div class="writers_show">
-  <%= link_to root_path do %>
+  <%= link_to root_path, data: { 'turbolinks' => false } do %>
     <div class="back"></div>
   <% end %>
 
   <h1 class="h1" class="">About Me</h1>
 
   <div class="name_writer">
-    <%= @writer.name %>
+    <%= @writer.name %>　
+    <%= attachment_image_tag @writer, :image, :fill, 70, 70, format: 'jpeg', class: 'image_writer' %>
   </div>
 
   <div class="intro_writer">

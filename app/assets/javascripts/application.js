@@ -15,3 +15,9 @@
 //= require activestorage
 //= require turbolinks
 //= require_tree .
+
+
+// about_background_image
+$(function(){
+	$('.about_background_image').slideUp(2500);
+});

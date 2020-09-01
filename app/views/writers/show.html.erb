@@ -1,9 +1,11 @@
 <div class="writers_show">
-  <%= link_to root_path do %>
+  <%= link_to root_path, data: { 'turbolinks' => false } do %>
     <div class="back"></div>
   <% end %>
 
   <h1 class="h1">My Page</h1>
+
+  <%= attachment_image_tag @writer, :image, :fill, 60, 60, format: 'jpeg', class: 'image_writer' %>
 
   <%= link_to edit_writer_path(@writer) do %>
     <div class="writer_edit pull-right"></div>

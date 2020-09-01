@@ -2,7 +2,7 @@
   <nav class="header_nav">
     <ul>
       <li>
-        <%= link_to root_path do %>
+        <%= link_to root_path, data: { 'turbolinks' => false } do %>
           <h2 class="header_title">MY BLOG</h2>
         <% end %>
       </li>
@@ -12,7 +12,7 @@
         <% end %>
       </li>
       <li>
-      	<%= link_to root_path do %>
+      	<%= link_to root_path, data: { 'turbolinks' => false } do %>
           <div class="index_header"></div>
         <% end %>
       </li>
@@ -32,12 +32,12 @@
   <nav class="header_nav">
     <ul>
       <li>
-        <%= link_to root_path do %>
+        <%= link_to root_path, data: { 'turbolinks' => false } do %>
           <h2 class="header_title">MY BLOG</h2>
         <% end %>
       </li>
       <li>
-        <%= link_to root_path do %>
+        <%= link_to root_path, data: { 'turbolinks' => false } do %>
           <div class="index_header"></div>
         <% end %>
       </li>

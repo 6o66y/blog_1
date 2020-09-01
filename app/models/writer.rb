@@ -8,4 +8,6 @@ class Writer < ApplicationRecord
 
   validates :name, length: { maximum: 30 }
   validates :introduction, length: { maximum: 200 }
+
+  attachment :image
 end

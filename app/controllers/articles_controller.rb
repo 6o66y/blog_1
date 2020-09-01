@@ -21,6 +21,7 @@ class ArticlesController < ApplicationController
 
   def show
   	@article = Article.find(params[:id])
+    @writer = Writer.find(1)
   end
 
   def edit
