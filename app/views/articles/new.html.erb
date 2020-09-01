@@ -1,3 +1,7 @@
+<%= link_to root_path do %>
+  <div class="back"></div>
+<% end %>
+
 <h1 class="h1">Create New Article</h1>
 
 <%= form_with model: @article, url: articles_path, local: true do |f| %>

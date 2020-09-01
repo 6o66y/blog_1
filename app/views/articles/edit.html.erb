@@ -6,7 +6,7 @@
 
 <%= form_with model: @article, url: article_path(@article), local: true do |f| %>
   <div class="form-group">
-    <%= f.text_field :title, placeholder: 'max:100', class: 'form-control' %>
+    <%= f.text_field :title, placeholder: 'Title (max:100)', class: 'form-control' %>
   </div>
   
   <div class="form-group">

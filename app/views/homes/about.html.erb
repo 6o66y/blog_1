@@ -1,0 +1,15 @@
+<div class="writers_show">
+  <%= link_to root_path do %>
+    <div class="back"></div>
+  <% end %>
+
+  <h1 class="h1" class="">About Me</h1>
+
+  <div class="name_writer">
+    <%= @writer.name %>
+  </div>
+
+  <div class="intro_writer">
+    <%= markdown(@writer.introduction).html_safe %>
+  </div>
+</div>

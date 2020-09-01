@@ -5,4 +5,7 @@ class Writer < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :articles, dependent: :destroy
+
+  validates :name, length: { maximum: 30 }
+  validates :introduction, length: { maximum: 200 }
 end

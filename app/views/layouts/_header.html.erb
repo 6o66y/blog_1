@@ -32,18 +32,20 @@
   <nav class="header_nav">
     <ul>
       <li>
-        <h2 class="header_title">MY BLOG</h2>
+        <%= link_to root_path do %>
+          <h2 class="header_title">MY BLOG</h2>
+        <% end %>
       </li>
       <li>
         <%= link_to root_path do %>
           <div class="index_header"></div>
         <% end %>
       </li>
-      <!-- <li>
-        <%#= link_to writer_path(writer) do %>
+      <li>
+        <%= link_to about_path do %>
           <div class="myPage"></div>
-        <%# end %>
-      </li> -->
+        <% end %>
+      </li>
     </ul>
   </nav>
 <% end %>

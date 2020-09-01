@@ -3,21 +3,21 @@
     <div class="back"></div>
   <% end %>
 
-  <h1 class="">My Page</h1>
+  <h1 class="h1">My Page</h1>
 
-  <div class="row">
-  	<div class="col-md-2">
-      <%= link_to edit_writer_path(@writer) do %>
-        <div class="writer_edit pull-right"></div>
-      <% end %>
-    </div>
+  <%= link_to edit_writer_path(@writer) do %>
+    <div class="writer_edit pull-right"></div>
+  <% end %>
+
+  <div class="name_writer">
+    Name: <%= @writer.name %>
   </div>
 
-  <div class="writer_name">
-    <%= @writer.name %>
+  <div class="email_writer">
+    Email: <%= @writer.email %>
   </div>
 
-  <div class="writer_name">
-    <%= @writer.email %>
+  <div class="intro_writer">
+    <%= markdown(@writer.introduction).html_safe %>
   </div>
 </div>

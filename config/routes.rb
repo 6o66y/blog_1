@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'homes/about'
   get 'writers/edit'
   get 'writers/show'
   devise_for :writers, controllers: {
@@ -14,4 +15,6 @@ Rails.application.routes.draw do
   root 'articles#index'
   resources :articles, only: [:new, :show, :edit, :create, :update, :destroy]
   resources :writers, only: [:show, :edit, :update]
+
+  get 'about' => 'homes#about'
 end

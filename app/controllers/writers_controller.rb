@@ -21,7 +21,7 @@ class WritersController < ApplicationController
   private
 
   def writer_params
-  	params.require(:writer).permit(:name, :email)
+  	params.require(:writer).permit(:name, :email, :introduction)
   end
 
   def guard_other
