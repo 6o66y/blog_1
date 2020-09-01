@@ -21,6 +21,7 @@ class ArticlesController < ApplicationController
 
   def show
   	@article = Article.find(params[:id])
+    @articles = Article.all.order(created_at: :desc).limit(4)
     @writer = Writer.find(1)
   end
 

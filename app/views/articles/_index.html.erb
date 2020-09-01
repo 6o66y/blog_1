@@ -1,0 +1,14 @@
+<% @articles.each do |article| %>
+  <div class="index_item">
+    <%= link_to article_path(article) do %>
+      <div class="date_index">
+        <%= article.created_at.strftime("%Y-%m-%d %H:%M") %>
+      </div>
+
+      <div class="title_index">
+        <%= article.title %>
+      </div>
+      <%= attachment_image_tag article, :image, :fill, 90, 50, format: 'jpeg', class: 'image center-block' %>
+    <% end %>
+  </div>
+<% end %>
