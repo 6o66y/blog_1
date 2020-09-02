@@ -19,5 +19,5 @@
 
 // about_background_image
 $(function(){
-	$('.about_background_image').slideUp(2500);
+	$('.about_background_image').hide().fadeIn(2000);
 });
