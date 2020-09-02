@@ -18,10 +18,23 @@ class WritersController < ApplicationController
   	end
   end
 
+  def edit_password
+    @writer = Writer.find(params[:id])
+  end
+
+  def update_password
+    @writer = Writer.find(params[:id])
+    if @writer.update(writer_params)
+      redirect_to root_path
+    else
+      render :edit_password
+    end
+  end
+
   private
 
   def writer_params
-  	params.require(:writer).permit(:name, :email, :introduction, :image)
+  	params.require(:writer).permit(:name, :email, :introduction, :image, :password, :password_confirmation)
   end
 
   def guard_other

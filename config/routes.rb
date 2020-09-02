@@ -17,4 +17,7 @@ Rails.application.routes.draw do
   resources :writers, only: [:show, :edit, :update]
 
   get 'about' => 'homes#about'
+
+  get 'writers/edit_password/:id' => 'writers#edit_password', as: 'edit_password'
+  patch 'writers/update_password/:id' => 'writers#update_password', as: 'update_password'
 end
