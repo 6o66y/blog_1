@@ -9,4 +9,12 @@
   <p class="col-md-11 text-right">(<%= @articles.count %> articles)</p>
 </div> -->
 
+<%= search_form_for @q, url: root_path do |f| %>
+
+  <div class="pull-right">
+    <%= f.search_field :title_or_body_cont, placeholder: 'Keyword', class: 'form-group' %>
+    <%= f.submit 'Search', class: 'btn btn-warning btn-xs search' %>
+  </div>
+<% end %>
+
 <%= render 'paginate', articles: @articles %>
